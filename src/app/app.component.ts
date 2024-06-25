@@ -1,13 +1,29 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {DropdownComponent} from "./dropdown/dropdown.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    standalone: true,
+    imports: [RouterOutlet, DropdownComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'cye-2';
+    dropdownOptions = [
+        {
+            id: 1,
+            name: 'a',
+            desc: 'a desc'
+        },
+        {
+            id: 2,
+            name: 'b',
+            desc: 'b desc'
+        }, {
+            id: 3,
+            name: 'c',
+            desc: 'c desc'
+        },
+    ];
 }
