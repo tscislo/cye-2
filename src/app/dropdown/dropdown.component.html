@@ -1,6 +1,5 @@
 <select>
     @for (item of items; track item.id) {
-<!--        <option>{{item.name}}</option>-->
         <ng-container
             [ngTemplateOutletContext]="{ name: item.name + '-' + item.desc }"
             [ngTemplateOutlet]="template"></ng-container>
